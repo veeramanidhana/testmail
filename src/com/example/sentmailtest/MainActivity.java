@@ -1,7 +1,8 @@
 package com.example.sentmailtest;
 
 import java.util.List;
-
+import org.apache.cordova.*;
+import com.example.sentmailtest.*;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -11,13 +12,14 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+
+public class MainActivity extends DroidGap  {
 
 	private static final int REQUEST_SEND_MAIL = 0;
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		super.loadUrl("file:///android_asset/www/index.html");
 	}
 
 	@Override
